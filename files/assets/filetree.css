@@ -1,0 +1,38 @@
+ftnode {
+    display: block;
+}
+ftnode_head {
+    display: flex;
+    min-width: var(--filetree-size);
+    min-height: var(--filetree-size);
+}
+ftnode_head .chevron {
+    min-width: var(--filetree-size);
+    min-height: var(--filetree-size);
+    max-width: var(--filetree-size);
+    max-height: var(--filetree-size);
+    color: #bbb;
+}
+ftnode_head .chevron:hover {
+    color: #fff;
+}
+ftnode_head .icon {
+    min-width: calc(var(--filetree-size) - 4px);
+    min-height: calc(var(--filetree-size) - 4px);
+    max-width: calc(var(--filetree-size) - 4px);
+    max-height: calc(var(--filetree-size) - 4px);
+    margin: 2px;
+    margin-right: 5px;
+}
+ftnode_head span {
+    height: var(--filetree-size);
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+ftnode_inner {
+    display: block;
+}
+ftnode_head.selected {
+    background-color: var(--filetree-selected);
+}

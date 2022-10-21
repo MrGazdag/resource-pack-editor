@@ -1,0 +1,425 @@
+:root {
+    --main: rgb(0, 183, 255);
+    --background: rgb(0, 33, 46);
+    --filetree: rgb(0, 49, 68);
+    --filetree-selected: rgb(0, 121, 168);
+    --darker0: rgb(0, 46, 65);
+    --darker: rgb(0, 61, 85);
+    --darker2: rgb(0, 80, 112);
+    --darker3: rgb(0, 101, 141);
+    --topbar: rgb(0, 79, 110);
+    --topbar-height: 30px;
+    --bottombar-height: 30px;
+    --text-color: #ddd;
+    --filetree-size: 20px;
+    --filetree-fontsize: 1.5em;
+}
+@font-face {
+    font-family: Minecraft;
+    src: url(Minecraftia-Regular.ttf);
+}
+@font-face {
+    font-family: JetbrainsMono;
+    src: url(JetBrainsMono-Regular.woff2);
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #aaa8;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaaa;
+}
+::-webkit-scrollbar-track {
+    background-color: #0000;
+}
+.flexgrow {
+    flex-grow: 1;
+}
+
+.buttonlike {
+    border: 1px solid gray;
+    background-color: var(--darker);
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+.buttonlike:not(.disabled):hover {
+    background-color: var(--darker2);
+}
+.buttonlike.disabled::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8888;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: var(--background);
+    flex-direction: column;
+    position: relative;
+    color: var(--text-color);
+    font-family: "Segoe UI";
+    overflow: hidden;
+}
+#topbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: var(--topbar);
+    height: 30px;
+    box-shadow: 0px 1px 1px black;
+}
+#bottombar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--darker);
+    height: 30px;
+    box-shadow: 0px -1px 3px black;
+}
+#outer {
+    margin-top: var(--topbar-height);
+    margin-bottom: var(--topbar-height);
+    height: calc(100% - var(--topbar-height) - var(--topbar-height));
+    position: absolute;
+    width: 100%;
+}
+#content_main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
+#filetree {
+    background-color: var(--filetree);
+    min-width: 200px;
+    width: 400px;
+    height: 100%;
+    overflow: auto;
+}
+#filetree_resizer {
+    cursor: ew-resize;
+    width: 6px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 397px;
+}
+#main {
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+#drag_box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+#landing {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    display: flex;
+}
+#l_home {
+    background-color: var(--darker0);
+    margin: auto;
+    box-shadow: 0 0 5px #000;
+}
+#l_home_header {
+    background-color: var(--darker);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+#l_home_header h2 {
+    margin: 0;
+}
+#l_home_buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+.l_home_button {
+    width: 200px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+}
+.l_home_button span {
+    width: 160px;
+    margin: 20px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.l_home_button svg {
+    width: 150px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#l_open {
+    height: 600px;
+    background-color: var(--darker0);
+    margin: auto;
+    box-shadow: 0 0 5px #000;
+    display: flex;
+    flex-direction: column;
+}
+#l_open_header {
+    background-color: var(--darker);
+    box-shadow: 0 1px 0 0 black;
+    text-align: left;
+    position: relative;
+    height: 45px;
+}
+#l_open_header h3 {
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+#l_open_content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+#l_open_content > div {
+    width: 500px;
+}
+#l_open_import {
+    border-right: 1px solid gray;
+}
+#l_open_back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 25px;
+    width: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+#l_open_back:hover {
+    color: #fff;
+}
+#l_open_source_buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5px;
+    user-select: none;
+}
+.l_open_source_btn {
+    margin: 10px;
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+}
+.l_open_source_btn svg {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.l_open_source_btn span {
+    text-align: center;
+    font-weight: 500;
+    margin: 10px;
+    margin-top: 0px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#l_open_options {
+    padding: 10px;
+}
+#l_open_options_text {
+    margin: 0;
+    margin-bottom: 5px;
+}
+.l_open_opts_text {
+    margin: 10px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+    display: block;
+}
+#l_open_opts_packtype {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+.l_open_opts_packtype_option {
+    border: 1px solid gray;
+    padding: 7px;
+    background-color: var(--darker);
+    transition: background-color 0.2s ease;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.l_open_opts_packtype_option:hover {
+    background-color: var(--darker2);
+}
+
+.l_open_opts_packtype_option.selected {
+    background-color: var(--darker2);
+}
+.l_open_opts_packtype_option:not(.selected) {
+    cursor: pointer;
+}
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    position: relative;
+    width: fit-content;
+    user-select: none;
+    cursor: pointer;
+    height: 40px;
+}
+#l_open_opts_packformat {
+    width: fit-content;
+}
+.dropdown.disabled::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8888;
+}
+.dropdown > svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+    pointer-events: none;
+}
+.dropdown_entries {
+    position: relative;
+    left: -1px;
+    width: 100%;
+    border: 1px solid gray;
+}
+.dropdown_entries_inner {
+    display: inline-block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 168px;
+    width: 100%;
+}
+.dropdown:not(.open) > .dropdown_entries {
+    height: 0;
+    overflow: hidden;
+    border: 1px solid #0000;
+}
+.dropdown_entry {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 50px;
+    flex-grow: 1;
+    background-color: var(--darker);
+}
+.dropdown_entry:not(.dropdown_selected) {
+    border-top: 1px solid var(--darker0);
+    border-bottom: 1px solid var(--darker0);
+}
+.dropdown_entry:hover {
+    background-color: var(--darker2);
+}
+#l_open_loaded_pack {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#l_open_loaded_pack h3 {
+    text-align: center;
+}
+#l_open_loaded_packs {
+    flex-grow: 1;
+    position: relative;
+}
+#l_open_loaded_no_packs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #bbb;
+}
+.l_open_loaded_entry {
+    width: 400px;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+}
+#l_open_loaded_entry img {
+    width: 64px;
+    height: 64px;
+    margin: 4px;
+}
+.l_open_loaded_entry_text {
+    width: 324px;
+    height: 64px;
+    margin: 4px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+.l_open_loaded_entry_name {
+    height: 18px;
+    margin-bottom: 4px;
+}
+.l_open_loaded_entry_desc {
+    height: 38px;
+    margin-bottom: 4px;
+}
+#l_open_start_editing {
+    margin: 10px auto;
+    padding: 10px;
+}

@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/core.css">
+        <link rel="stylesheet" href="assets/filetree.css">
+        <link rel="stylesheet" href="assets/pages.css">
+        <link rel="stylesheet" href="assets/editors.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"/>
+    </head>
+    <body>
+        <svg display="none">
+            <defs>
+                <symbol id="chevron_left" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+                </symbol>
+                <symbol id="chevron_right" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                </symbol>
+                <symbol id="chevron_up" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
+                </symbol>
+                <symbol id="chevron_down" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                </symbol>
+                <symbol id="icon_web" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+                </symbol>
+                <symbol id="icon_warning" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M13 14H11V9H13M13 18H11V16H13M1 21H23L12 2L1 21Z" />
+                </symbol>
+                <symbol id="icon_error" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+                </symbol>
+                <symbol id="icon_resource_pack" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M3,3H21V7H3V3M4,8H20V21H4V8M9.5,11A0.5,0.5 0 0,0 9,11.5V13H15V11.5A0.5,0.5 0 0,0 14.5,11H9.5Z" />
+                </symbol>
+                <symbol id="icon_resource_pack_create" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M21 7H3V3H21V7M13 19C13 19.7 13.13 20.37 13.35 21H4V8H20V13.09C19.67 13.04 19.34 13 19 13C15.69 13 13 15.69 13 19M15 13V11.5C15 11.22 14.78 11 14.5 11H9.5C9.22 11 9 11.22 9 11.5V13H15M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z" />
+                </symbol>
+                <symbol id="icon_resource_pack_edit" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M20 10.3V8H4V21H11V19.13L19.39 10.74C19.57 10.56 19.78 10.42 20 10.3M15 13H9V11.5C9 11.22 9.22 11 9.5 11H14.5C14.78 11 15 11.22 15 11.5V13M21 7H3V3H21V7M22.85 14.19L21.87 15.17L19.83 13.13L20.81 12.15C21 11.95 21.33 11.95 21.53 12.15L22.85 13.47C23.05 13.67 23.05 14 22.85 14.19M19.13 13.83L21.17 15.87L15.04 22H13V19.96L19.13 13.83Z" />
+                </symbol>
+                <symbol id="icon_namespace" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3M11 8H9V10C9 11.1 8.1 12 7 12C8.1 12 9 12.9 9 14V16H11V18H9C7.9 18 7 17.1 7 16V15C7 13.9 6.1 13 5 13V11C6.1 11 7 10.1 7 9V8C7 6.9 7.9 6 9 6H11V8M19 13C17.9 13 17 13.9 17 15V16C17 17.1 16.1 18 15 18H13V16H15V14C15 12.9 15.9 12 17 12C15.9 12 15 11.1 15 10V8H13V6H15C16.1 6 17 6.9 17 8V9C17 10.1 17.9 11 19 11V13Z" />
+                </symbol>
+                <symbol id="icon_folder" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z" />
+                </symbol>
+                <symbol id="icon_file_generic" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M13,9V3.5L18.5,9M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z" />
+                </symbol>
+                <symbol id="icon_model" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L10.11,5.22L16,8.61L17.96,7.5L12,4.15M6.04,7.5L12,10.85L13.96,9.75L8.08,6.35L6.04,7.5M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z" />
+                </symbol>
+                <symbol id="icon_texture" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
+                </symbol>
+                <symbol id="icon_particle" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M7.2,11.2C8.97,11.2 10.4,12.63 10.4,14.4C10.4,16.17 8.97,17.6 7.2,17.6C5.43,17.6 4,16.17 4,14.4C4,12.63 5.43,11.2 7.2,11.2M14.8,16A2,2 0 0,1 16.8,18A2,2 0 0,1 14.8,20A2,2 0 0,1 12.8,18A2,2 0 0,1 14.8,16M15.2,4A4.8,4.8 0 0,1 20,8.8C20,11.45 17.85,13.6 15.2,13.6A4.8,4.8 0 0,1 10.4,8.8C10.4,6.15 12.55,4 15.2,4Z" />
+                </symbol>
+                <symbol id="x" viewBox="0 0 48 48">
+                    <path fill="currentColor" d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z" />
+                </symbol>
+            </defs>
+        </svg>
+        <div id="outer">
+            <div id="content_main">
+                <div id="filetree"></div>
+                <div id="main">
+                    <div id="main_page_bar"></div>
+                    <div id="main_page_body"></div>
+                    <div id="main_no_pages"></div>
+                </div>
+                <div id="filetree_resizer"></div>
+            </div>
+            <div id="landing">
+                <div id="l_home">
+                    <div id="l_home_header">
+                        <h2>Welcome!</h2>
+                    </div>
+                    <div id="l_home_buttons">
+                        <div id="l_home_btn_new" class="buttonlike l_home_button">
+                            <svg>
+                                <use xlink:href="#icon_resource_pack_create"></use>
+                            </svg>
+                            <span>Create a new Resource Pack</span>
+                        </div>
+                        <div id="l_home_btn_open" class="buttonlike l_home_button">
+                            <svg>
+                                <use xlink:href="#icon_resource_pack_edit"></use>
+                            </svg>
+                            <span>Open existing Resource Pack(s)</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="l_new" style="display: none;">
+
+                </div>
+                <div id="l_open" style="display: none;">
+                    <div id="l_open_header">
+                        <h3>Open existing Resource Pack(s)</h3>
+                        <svg id="l_open_back">
+                            <use xlink:href="#chevron_left"></use>
+                        </svg>
+                    </div>
+                    <div id="l_open_content">
+                        <div id="l_open_import">
+                            <div id="l_open_source_buttons">
+                                <div id="l_open_source_zip" class="buttonlike l_open_source_btn">
+                                    <svg>
+                                        <use xlink:href="#icon_resource_pack"></use>
+                                    </svg>
+                                    <span>Import from archive (.zip)</span>
+                                </div>
+                                <div id="l_open_source_folder" class="buttonlike l_open_source_btn">
+                                    <svg>
+                                        <use xlink:href="#icon_folder"></use>
+                                    </svg>
+                                    <span>Import from folder</span>
+                                </div>
+                                <div id="l_open_source_url" class="buttonlike l_open_source_btn">
+                                    <svg>
+                                        <use xlink:href="#icon_web"></use>
+                                    </svg>
+                                    <span>Import from URL</span>
+                                </div>
+                            </div>
+                            <div id="l_open_options">
+                                <h2 id="l_open_options_text">Pack Options</h2>
+                                <span class="l_open_opts_text">Pack Type:</span>
+                                <div id="l_open_opts_packtype">
+                                    <div id="l_open_packtype_texture" class="l_open_opts_packtype_option">Texture Pack (&lt; 1.6.1 / 13w24a)</div>
+                                    <div id="l_open_packtype_resource" class="l_open_opts_packtype_option">Resource Pack</div>
+                                </div>
+                                <span class="l_open_opts_text">Pack Format:</span>
+                                <div id="l_open_opts_packformat"></div>
+                                <div id="l_open_version_table">
+                                    <div id="l_open_version_table_header">
+                                        <div class="l_open_version_table_head_col">Version</div>
+                                        <div class="l_open_version_table_head_col">Supported Pack Format</div>
+                                    </div>
+                                    <div id="l_open_version_entries">
+                                        <div class="l_open_version_table_entry_full">
+                                            Recommended Releases
+                                            <div class="l_open_version_table_entry_full">
+                                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="l_open_loaded">
+                            <div id="l_open_loaded_pack">
+                                <h3>Loaded Packs</h3>
+                                <div id="l_open_loaded_packs">
+                                    <div id="l_open_loaded_no_packs">
+                                        <div class="flexgrow"></div>
+                                        <h4>No packs loaded</h4>
+                                        <span>Use the buttons to import a resourcepack!</span>
+                                        <div class="flexgrow"></div>
+                                        <div class="flexgrow"></div>
+                                    </div>
+                                </div>
+                                <div id="l_open_start_editing" class="buttonlike">Start Editing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="topbar">
+
+        </div>
+        <div id="bottombar">
+
+        </div>
+        <div id="drag_box"></div>
+        <script src="lib/zip.min.js"></script>
+        <script src="lib/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/idb-keyval@6/dist/umd.js"></script>
+        <script src="assets/core.js"></script>
+        <script src="assets/filetree.js"></script>
+        <script src="assets/pages.js"></script>
+        <script src="assets/editors.js"></script>
+        <script src="assets/minecraft.js"></script>
+        <script>init();</script>
+    </body>
+</html>

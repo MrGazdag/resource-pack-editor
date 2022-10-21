@@ -1,0 +1,94 @@
+page_body.editor_text {
+    font-family: JetbrainsMono;
+    overflow: hidden;
+}
+page_body.editor_text > div {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+}
+page_body.editor_text .text_1 {color: #a75d32;}
+page_body.editor_text .text_2 {color: #72ca94;}
+page_body.editor_text .text_url {text-decoration: underline;transition: background-color 0.1s ease;}
+page_body.editor_text.control .text_url {cursor: pointer;}
+page_body.editor_text.control .text_url:hover {background-color: #155cf5;}
+page_body.editor_text .text_warning {
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'0%200%206%203'%20width%3D'6'%20height%3D'3'%3E%3Cpath%20fill%3D'%230000'%20stroke%3D'%23ffbb00'%20stroke-width%3D'1'%20d%3D'M0%201.5L1.5%203l3%20-3L6%201.5'%2F%3E%3C%2Fsvg%3E") repeat-x bottom left;
+}
+page_body.editor_text .text_error {
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'0%200%206%203'%20width%3D'6'%20height%3D'3'%3E%3Cpath%20fill%3D'%230000'%20stroke%3D'%23ff0000'%20stroke-width%3D'1'%20d%3D'M0%201.5L1.5%203l3%20-3L6%201.5'%2F%3E%3C%2Fsvg%3E") repeat-x bottom left;
+}
+page_body.editor_text .linesContentRoot {
+    user-select: contain;
+    overflow: hidden;
+}
+page_body.editor_text .linesCursorRoot {
+    cursor: text;
+    overflow: hidden;
+}
+page_body.editor_text .lineCountRoot {
+    width: max-content;
+    text-align: right;
+    padding: 0 3px;
+    margin-left: 12px;
+    color: #999;
+    border-right: #9999 solid 1px;
+    user-select: none;
+    overflow: hidden;
+}
+page_body.editor_text .lineCountRoot > div.selected {
+    color: #eee;
+}
+page_body.editor_text .linesRoot {
+    position: relative;
+    user-select: contain;
+    flex-grow: 1;
+}
+page_body.editor_text .linesRoot > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+page_body.editor_text .lineCountRoot > div {
+    height: 1.3em;
+    line-height: 1.3em;
+}
+page_body.editor_text .linesContentRoot > div {
+    height: 1.3em;
+    line-height: 1.3em;
+    white-space: pre;
+    width: max-content;
+}
+page_body.editor_text .linesSelectRoot > div {
+    height: 1.3em;
+    line-height: 1.3em;
+    white-space: pre;
+    width: max-content;
+}
+page_body.editor_text .linesCursorRoot > div {
+    height: 1.3em;
+    line-height: 1.3em;
+    width: 2px;
+    position: absolute;
+    background-color: #eee;
+    pointer-events: none;
+}
+page_body.editor_text .linesCursorRoot > div.blinking {
+    animation: blinking 1s infinite step-start;
+}
+@keyframes blinking {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+page_body.editor_image canvas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}

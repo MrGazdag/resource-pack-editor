@@ -1,0 +1,164 @@
+{
+    "pack_version": 0,
+    "fileList": {
+        "exclude": ["META-INF.*",".*\\.class","null"]
+    },
+    "intentions": [
+        {
+            "id": "texture_maps_old",
+            "maps": {
+                "terrain.png": [
+                    {
+                        "from": [0,0],
+                        "size": [16,16],
+                        "title": "Grass Block (top)",
+                        "notes": "This texture is the top of the grass block. Note that this texture is grayscaled, because the biome color will be applied later."
+                    },
+                    {
+                        "from": [16,0],
+                        "size": [16,16],
+                        "title": "Stone Block"
+                    },
+                    {
+                        "from": [32,0],
+                        "size": [16,16],
+                        "title": "Dirt"
+                    },
+                    {
+                        "from": [48,0],
+                        "size": [16,16],
+                        "title": "Grass Block (side)",
+                        "notes": "Unlike the top texture, the side texture does not have the biome colored green part. This is because the dirt part would've turned green too."
+                    },
+                    {
+                        "from": [64,0],
+                        "size": [16,16],
+                        "title": "Oak Planks"
+                    },
+                    {
+                        "from": [80,0],
+                        "size": [16,16],
+                        "title": "Stone Slab (side)"
+                    },
+                    {
+                        "from": [96,0],
+                        "size": [16,16],
+                        "title": "Stone Slab (top)"
+                    },
+                    {
+                        "from": [112,0],
+                        "size": [16,16],
+                        "title": "Bricks"
+                    },
+                    {
+                        "from": [128,0],
+                        "size": [16,16],
+                        "title": "TNT (side)"
+                    },
+                    {
+                        "from": [144,0],
+                        "size": [16,16],
+                        "title": "TNT (top)"
+                    },
+                    {
+                        "from": [160,0],
+                        "size": [16,16],
+                        "title": "TNT (bottom)"
+                    },
+                    {
+                        "from": [176,0],
+                        "size": [16,16],
+                        "title": "Cobweb"
+                    },
+                    {
+                        "from": [192,0],
+                        "size": [16,16],
+                        "title": "Rose"
+                    },
+                    {
+                        "from": [208,0],
+                        "size": [16,16],
+                        "title": "Dandelion"
+                    },
+                    {
+                        "from": [240,0],
+                        "size": [16,16],
+                        "title": "Oak Sapling"
+                    },
+                    {
+                        "from": [0,16],
+                        "size": [16,16],
+                        "title": "Cobblestone"
+                    },
+                    {
+                        "from": [16,16],
+                        "size": [16,16],
+                        "title": "Bedrock"
+                    },
+                    {
+                        "from": [32,16],
+                        "size": [16,16],
+                        "title": "Sand"
+                    },
+                    {
+                        "from": [48,16],
+                        "size": [16,16],
+                        "title": "Gravel"
+                    },
+                    {
+                        "from": [64,16],
+                        "size": [16,16],
+                        "title": "Oak Log (side)"
+                    },
+                    {
+                        "from": [80,16],
+                        "size": [16,16],
+                        "title": "Oak Log (top)"
+                    },
+                    {
+                        "from": [96,16],
+                        "size": [16,16],
+                        "title": "Iron Block (top)"
+                    },
+                    {
+                        "from": [112,16],
+                        "size": [16,16],
+                        "title": "Gold Block (top)"
+                    },
+                    {
+                        "from": [128,16],
+                        "size": [16,16],
+                        "title": "Diamond Block (top)"
+                    },
+                    {
+                        "from": [144,16],
+                        "size": [16,16],
+                        "title": "Chest (top)",
+                        "notes": "This texture is used for the double chest too."
+                    },
+                    {
+                        "from": [160,16],
+                        "size": [16,16],
+                        "title": "Chest (side)"
+                    },
+                    {
+                        "from": [176,16],
+                        "size": [16,16],
+                        "title": "Chest (front)"
+                    },
+                    {
+                        "from": [192,16],
+                        "size": [16,16],
+                        "title": "Red Mushroom"
+                    }
+                ]
+            }
+        }
+    ],
+    "files": {
+        "terrain.png": {
+            "type": "image_editor",
+            "image_editor_mode": "texture_map_old"
+        }
+    }
+}
