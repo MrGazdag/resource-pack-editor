@@ -1,0 +1,54 @@
+{
+    "blocks": {
+        "type": "block",
+        "block_source": "hardcoded_old",
+        "blocks": {
+            "grass_block": {
+                "model": "grass_block",
+                "textures": {
+                    "top": {
+                        "file": "terrain.png",
+                        "from": [0, 0],
+                        "size": [0.0625,0.0625]
+                    },
+                    "side": {
+                        "file": "terrain.png",
+                        "from": [0.1875, 0],
+                        "size": [0.0625,0.0625]
+                    },
+                    "bottom": {
+                        "file": "terrain.png",
+                        "from": [0.125, 0],
+                        "size": [0.0625,0.0625]
+                    },
+                    "snow": {
+                        "file": "terrain.png",
+                        "from": [0.125, 0.25],
+                        "size": [0.0625,0.0625]
+                    },
+                    "snowy_side": {
+                        "file": "terrain.png",
+                        "from": [0.25, 0.25],
+                        "size": [0.0625,0.0625]
+                    }
+                },
+                "opaque": true
+            }
+        }
+    },
+    "main_menu": {
+        "type": "main_menu_alpha",
+        "version": "a1.2.2a",
+        "assets": {
+            "background": "gui/background.png",
+            "gui": "gui/gui.png",
+            "splashes": "title/splashes.txt",
+            "logo": "gui/logo.png",
+            "font": "font/default.png",
+            "default_pack": "pack.png",
+            "unknown_pack": "gui/unknown_pack.png"
+        },
+        "background_multiplier": "0.25",
+        "pack_selection_multiplier": "0.125"
+    }
+}

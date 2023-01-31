@@ -1,0 +1,206 @@
+{
+    "air": {
+        "culling": false,
+        "opaque": false,
+        "block_type": "hardcoded",
+        "model": "empty",
+        "textures": {}
+    },
+    "stone": {
+        "culling": true,
+        "opaque": true,
+        "block_type": "hardcoded",
+        "model": "cube_all",
+        "textures": {
+            "all": {
+                "file": "terrain.png",
+                "from": [0.0625, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "dirt": {
+        "culling": true,
+        "opaque": true,
+        "block_type": "hardcoded",
+        "model": "cube_all",
+        "textures": {
+            "all": {
+                "file": "terrain.png",
+                "from": [0.125, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "grass_block": {
+        "culling": true,
+        "opaque": true,
+        "block_type": "hardcoded",
+        "model": "cube_column",
+        "textures": {
+            "top": {
+                "tint": "biome",
+                "file": "terrain.png",
+                "from": [0, 0],
+                "size": [0.0625,0.0625]
+            },
+            "side": {
+                "file": "terrain.png",
+                "from": [0.1875, 0],
+                "size": [0.0625,0.0625]
+            },
+            "bottom": {
+                "file": "terrain.png",
+                "from": [0.125, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "planks": {
+        "culling": true,
+        "opaque": true,
+        "block_type": "hardcoded",
+        "model": "cube_all",
+        "textures": {
+            "all": {
+                "file": "terrain.png",
+                "from": [0.25, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "stone_slab": {
+        "culling": false,
+        "opaque": true,
+        "block_type": "hardcoded",
+        "model": "slab",
+        "textures": {
+            "top": {
+                "file": "terrain.png",
+                "from": [0.375, 0],
+                "size": [0.0625,0.0625]
+            },
+            "side": {
+                "file": "terrain.png",
+                "from": [0.3125, 0],
+                "size": [0.0625,0.03125]
+            },
+            "bottom": {
+                "file": "terrain.png",
+                "from": [0.375, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "double_stone_slab": {
+        "culling": true,
+        "opaque": true,
+        "block_type": "hardcoded",
+        "model": "cube_column",
+        "textures": {
+            "top": {
+                "file": "terrain.png",
+                "from": [0.375, 0],
+                "size": [0.0625,0.0625]
+            },
+            "side": {
+                "file": "terrain.png",
+                "from": [0.3125, 0],
+                "size": [0.0625,0.0625]
+            },
+            "bottom": {
+                "file": "terrain.png",
+                "from": [0.375, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "bricks": {
+        "culling": true,
+        "opaque": true,
+        "block_type": "hardcoded",
+        "model": "cube_all",
+        "textures": {
+            "all": {
+                "file": "terrain.png",
+                "from": [0.4375, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "tnt": {
+        "culling": true,
+        "opaque": true,
+        "block_type": "hardcoded",
+        "model": "cube_column",
+        "textures": {
+            "top": {
+                "file": "terrain.png",
+                "from": [0.5625, 0],
+                "size": [0.0625,0.0625]
+            },
+            "side": {
+                "file": "terrain.png",
+                "from": [0.5, 0],
+                "size": [0.0625,0.0625]
+            },
+            "bottom": {
+                "file": "terrain.png",
+                "from": [0.625, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "cobweb": {
+        "culling": false,
+        "opaque": true,
+        "block_type": "hardcoded",
+        "model": "cross",
+        "textures": {
+            "texture": {
+                "file": "terrain.png",
+                "from": [0.6875, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "rose": {
+        "culling": false,
+        "opaque": false,
+        "block_type": "hardcoded",
+        "model": "cross",
+        "textures": {
+            "texture": {
+                "file": "terrain.png",
+                "from": [0.75, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "dandelion": {
+        "culling": false,
+        "opaque": false,
+        "block_type": "hardcoded",
+        "model": "cross",
+        "textures": {
+            "texture": {
+                "file": "terrain.png",
+                "from": [0.8125, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    },
+    "sapling": {
+        "culling": false,
+        "opaque": false,
+        "block_type": "hardcoded",
+        "model": "cross",
+        "textures": {
+            "texture": {
+                "file": "terrain.png",
+                "from": [0.9375, 0],
+                "size": [0.0625,0.0625]
+            }
+        }
+    }
+}

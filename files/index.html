@@ -3,8 +3,10 @@
         <link rel="stylesheet" href="assets/core.css">
         <link rel="stylesheet" href="assets/filetree.css">
         <link rel="stylesheet" href="assets/pages.css">
+        <link rel="stylesheet" href="assets/previews.css">
         <link rel="stylesheet" href="assets/editors.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"/>
+		<link rel="stylesheet" data-name="vs/editor/editor.main" href="lib/vs/editor/editor.main.css"/>
     </head>
     <body>
         <svg display="none">
@@ -67,7 +69,10 @@
                 <div id="filetree"></div>
                 <div id="main">
                     <div id="main_page_bar"></div>
-                    <div id="main_page_body"></div>
+                    <div id="main_page_contents">
+                        <div id="main_page_body"></div>
+                        <div id="main_page_preview"></div>
+                    </div>
                     <div id="main_no_pages"></div>
                 </div>
                 <div id="filetree_resizer"></div>
@@ -177,12 +182,19 @@
         <div id="drag_box"></div>
         <script src="lib/zip.min.js"></script>
         <script src="lib/three.min.js"></script>
+        <script>
+			var require = { paths: { vs: 'lib/vs' } };
+		</script>
+		<script src="lib/vs/loader.js"></script>
+		<script src="lib/vs/editor/editor.main.nls.js"></script>
+		<script src="lib/vs/editor/editor.main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/idb-keyval@6/dist/umd.js"></script>
-        <script src="assets/core.js"></script>
-        <script src="assets/filetree.js"></script>
-        <script src="assets/pages.js"></script>
-        <script src="assets/editors.js"></script>
-        <script src="assets/minecraft.js"></script>
+        <script src="assets/js/common.js"></script>
+        <script src="assets/js/filetree.js"></script>
+        <script src="assets/js/pages.js"></script>
+        <script src="assets/js/previews.js"></script>
+        <script src="assets/js/editors.js"></script>
+        <script src="assets/js/ui.js"></script>
         <script>init();</script>
     </body>
 </html>

@@ -1,0 +1,410 @@
+{
+    "contentType": "image/texture_sheet",
+    "mapped_regions": [
+        {
+            "from": [0,0],
+            "size": [0.0625,0.0625],
+            "title": "Grass Block (top)",
+            "notes": "This texture is grayscaled, because the biome color will be applied later. If this grass block is snowy, then no color will be applied.",
+            "previews": ["blocks:grass_block#nosnow"]
+        },
+        {
+            "from": [0.0625,0],
+            "size": [0.0625,0.0625],
+            "title": "Stone Block",
+            "previews": ["blocks:stone","blocks:furnace"]
+        },
+        {
+            "from": [0.125,0],
+            "size": [0.0625,0.0625],
+            "title": "Dirt",
+            "previews": ["blocks:grass_block","blocks:dirt"]
+        },
+        {
+            "from": [0.1875,0],
+            "size": [0.0625,0.0625],
+            "title": "Grass Block (side)",
+            "notes": "Unlike the top texture, the side texture does not have the biome colored green part. This is because the dirt part would've turned green too.",
+            "previews": ["blocks:grass_block"]
+        },
+        {
+            "from": [0.25,0],
+            "size": [0.0625,0.0625],
+            "title": "Oak Planks",
+            "previews": ["blocks:planks", "blocks:bookshelf", "blocks:crafting_table"]
+        },
+        {
+            "from": [0.3125,0],
+            "size": [0.0625,0.0625],
+            "title": "Stone Slab (side)",
+            "previews": ["blocks:stone_slab","blocks:double_stone_slab"]
+        },
+        {
+            "from": [0.375,0],
+            "size": [0.0625,0.0625],
+            "title": "Stone Slab (top)",
+            "previews": ["blocks:stone_slab","blocks:stone_double_slab"]
+        },
+        {
+            "from": [0.4375,0],
+            "size": [0.0625,0.0625],
+            "title": "Bricks",
+            "previews": ["blocks:bricks"]
+        },
+        {
+            "from": [0.5,0],
+            "size": [0.0625,0.0625],
+            "title": "TNT (side)",
+            "previews": ["blocks:tnt"]
+        },
+        {
+            "from": [0.5625,0],
+            "size": [0.0625,0.0625],
+            "title": "TNT (top)",
+            "previews": ["blocks:tnt"]
+        },
+        {
+            "from": [0.625,0],
+            "size": [0.0625,0.0625],
+            "title": "TNT (bottom)",
+            "previews": ["blocks:tnt"]
+        },
+        {
+            "from": [0.6875,0],
+            "size": [0.0625,0.0625],
+            "title": "Cobweb",
+            "previews": ["blocks:cobweb"]
+        },
+        {
+            "from": [0.75,0],
+            "size": [0.0625,0.0625],
+            "title": "Rose",
+            "previews": ["blocks:rose"]
+        },
+        {
+            "from": [0.8125,0],
+            "size": [0.0625,0.0625],
+            "title": "Dandelion",
+            "previews": ["blocks:dandelion"]
+        },
+        {
+            "from": [0.9375,0],
+            "size": [0.0625,0.0625],
+            "title": "Oak Sapling",
+            "previews": ["blocks:oak_sapling"]
+        },
+        {
+            "from": [0,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Cobblestone",
+            "previews": ["blocks:cobblestone"]
+        },
+        {
+            "from": [0.0625,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Bedrock",
+            "previews": ["blocks:bedrock"]
+        },
+        {
+            "from": [0.125,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Sand",
+            "previews": ["blocks:sand"]
+        },
+        {
+            "from": [0.1875,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Gravel",
+            "previews": ["blocks:gravel"]
+        },
+        {
+            "from": [0.25,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Oak Log (side)",
+            "previews": ["blocks:log"]
+        },
+        {
+            "from": [0.3125,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Oak Log (top)",
+            "previews": ["blocks:log"]
+        },
+        {
+            "from": [0.375,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Iron Block (top)",
+            "previews": ["blocks:iron_block"]
+        },
+        {
+            "from": [0.4375,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Gold Block (top)",
+            "previews": ["blocks:gold_block"]
+        },
+        {
+            "from": [0.5,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Diamond Block (top)",
+            "previews": ["blocks:diamond_block"]
+        },
+        {
+            "from": [0.5625,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Chest (top)",
+            "notes": "This texture is used for the double chest too.",
+            "previews": ["blocks:chest", "blocks:double_chest"]
+        },
+        {
+            "from": [0.625,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Chest (side)",
+            "previews": ["blocks:chest", "blocks:double_chest"]
+        },
+        {
+            "from": [0.6875,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Chest (front)",
+            "previews": ["blocks:chest", "blocks:double_chest"]
+        },
+        {
+            "from": [0.75,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Red Mushroom",
+            "previews": ["blocks:red_mushroom"]
+        },
+        {
+            "from": [0.8125,0.0625],
+            "size": [0.0625,0.0625],
+            "title": "Brown Mushroom",
+            "previews": ["blocks:brown_mushroom"]
+        },
+        {
+            "from": [0,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Gold Ore",
+            "previews": ["blocks:gold_ore"]
+        },
+        {
+            "from": [0.0625,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Iron Ore",
+            "previews": ["blocks:iron_ore"]
+        },
+        {
+            "from": [0.125,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Coal Ore",
+            "previews": ["blocks:coal_ore"]
+        },
+        {
+            "from": [0.1875,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Bookshelf",
+            "previews": ["blocks:bookshelf"]
+        },
+        {
+            "from": [0.25,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Mossy Cobblestone",
+            "previews": ["blocks:mossy_cobblestone"]
+        },
+        {
+            "from": [0.3125,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Obsidian",
+            "previews": ["blocks:obsidian"]
+        },
+        {
+            "from": [0.375,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Iron Block (side)",
+            "previews": ["blocks:iron_block"]
+        },
+        {
+            "from": [0.4375,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Gold Block (side)",
+            "previews": ["blocks:gold_block"]
+        },
+        {
+            "from": [0.5,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Diamond Block (side)",
+            "previews": ["blocks:diamond_block"]
+        },
+        {
+            "from": [0.5625,0.125],
+            "size": [0.125,0.0625],
+            "title": "Double Chest (front)",
+            "previews": ["blocks:double_chest"]
+        },
+        {
+            "from": [0.6875,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Crafting Table (top)",
+            "previews": ["blocks:crafting_table"]
+        },
+        {
+            "from": [0.75,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Furnace (front)",
+            "previews": ["blocks:furnace"]
+        },
+        {
+            "from": [0.8125,0.125],
+            "size": [0.0625,0.0625],
+            "title": "Furnace (side)",
+            "previews": ["blocks:furnace#unlit"]
+        },
+        {
+            "from": [0,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Sponge",
+            "previews": ["blocks:sponge"]
+        },
+        {
+            "from": [0.0625,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Glass",
+            "previews": ["blocks:glass"]
+        },
+        {
+            "from": [0.125,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Diamond Ore",
+            "previews": ["blocks:diamond_ore"]
+        },
+        {
+            "from": [0.1875,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Redstone Ore",
+            "previews": ["blocks:redstone_ore"]
+        },
+        {
+            "from": [0.25,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Oak Leaves (transparent)",
+            "notes": "This texture appears when the texture quality is set to fancy.",
+            "previews": ["blocks:oak_leaves#fancy"]
+        },
+        {
+            "from": [0.3125,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Oak Leaves (opaque)",
+            "notes": "This texture appears when the texture quality is set to fast.",
+            "previews": ["blocks:oak_leaves#fast"]
+        },
+        {
+            "from": [0.375,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Iron Block (bottom)",
+            "previews": ["blocks:iron_block"]
+        },
+        {
+            "from": [0.4375,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Gold Block (bottom)",
+            "previews": ["blocks:gold_block"]
+        },
+        {
+            "from": [0.5,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Diamond Block (bottom)",
+            "previews": ["blocks:diamond_block"]
+        },
+        {
+            "from": [0.5625,0.1875],
+            "size": [0.125,0.0625],
+            "title": "Double Chest (back)",
+            "previews": ["blocks:double_chest"]
+        },
+        {
+            "from": [0.6875,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Crafting Table (north-south)",
+            "previews": ["blocks:crafting_table"]
+        },
+        {
+            "from": [0.75,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Crafting Table (east-west)",
+            "previews": ["blocks:crafting_table"]
+        },
+        {
+            "from": [0.8125,0.1875],
+            "size": [0.0625,0.0625],
+            "title": "Lit Furnace (front)",
+            "previews": ["blocks:furnace#lit"]
+        },
+        {
+            "from": [0,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Wool",
+            "previews": ["blocks:cobblestone"]
+        },
+        {
+            "from": [0.0625,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Spawner",
+            "previews": ["blocks:spawner"]
+        },
+        {
+            "from": [0.125,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Snow",
+            "previews": ["blocks:snow","blocks:snow_block","blocks:grass_block#snow"]
+        },
+        {
+            "from": [0.1875,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Ice",
+            "previews": ["blocks:ice"]
+        },
+        {
+            "from": [0.25,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Snowy Grass Block (side)",
+            "previews": ["blocks:grass_block#snow"]
+        },
+        {
+            "from": [0.3125,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Cactus (top)",
+            "notes": "This texture is intentionally 1 pixel smaller, as the cactus model is smaller too.",
+            "previews": ["blocks:cactus"]
+        },
+        {
+            "from": [0.375,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Cactus (side)",
+            "notes": "This texture is intentionally 1 pixel thinner, as the cactus model is smaller too.",
+            "previews": ["blocks:cactus"]
+        },
+        {
+            "from": [0.4375,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Cactus (bottom)",
+            "notes": "This texture is intentionally 1 pixel smaller, as the cactus model is smaller too.",
+            "previews": ["blocks:cactus"]
+        },
+        {
+            "from": [0.5,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Clay",
+            "previews": ["blocks:clay"]
+        },
+        {
+            "from": [0.5625,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Sugar Cane",
+            "previews": ["blocks:sugar_cane"]
+        },
+        {
+            "from": [0.625,0.25],
+            "size": [0.0625,0.0625],
+            "title": "Note Block",
+            "notes": "This texture is also used for the side of the [jukebox](rpe://show_preview/blocks:jukebox).",
+            "previews": ["blocks:note_block", "blocks:jukebox"]
+        }
+    ]
+}
