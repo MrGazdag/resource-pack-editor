@@ -1,5 +1,5 @@
 import CancellationError from "../error/CancellationError";
-import CompletionError from "../error/Completion";
+import CompletionError from "../error/CompletionError";
 import ExecutionError from "../error/ExecutionError";
 import TimeoutError from "../error/TimeoutError";
 import TimeUnit from "./TimeUnit";
@@ -183,7 +183,7 @@ export default class Future<T> implements Promise<T> {
      */
     completeExceptionally(error: Error|any): boolean {
         if (this._state != FutureState.INCOMPLETE) return false;
-        
+
         this._error = error;
         this._state = FutureState.COMPLETED_EXCEPTIONALLY;
         this._completionPromiseReject(this._error);
@@ -241,7 +241,7 @@ export default class Future<T> implements Promise<T> {
      */
     getNow(valueIfAbsent: T=null): T {
         if (!this.isDone()) return valueIfAbsent;
-        else if (this.isCompletedExceptionally()) throw new CompletionError(this._error);
+        else if (this.isCompletedExceptionally()) throw new CompletionError("Timeout reached", this._error);
         else return this._result;
     }
     /**
