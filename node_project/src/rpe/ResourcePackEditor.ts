@@ -2,6 +2,8 @@ import RPEGame from "./game/RPEGame";
 import RPESupportedGameEntry from "./game/RPESupportedGameEntry";
 import Future from "./util/Future";
 import RPEEventNode from "./event/RPEEventNode";
+import RPEPlatform from "./platform/RPEPlatform";
+import IllegalStateError from "./error/IllegalStateError";
 
 const ResourcePackEditor = new class ResourcePackEditor {
     /*
@@ -53,7 +55,9 @@ const ResourcePackEditor = new class ResourcePackEditor {
     }
     */
    readonly EDITOR_VERSION = "0.0.1";
+   private readonly initialization = new Future<void>();
    eventNode: RPEEventNode = new RPEEventNode();
+   private platform: RPEPlatform;
    /**
     * A map containing the loaded games.
     */
@@ -117,6 +121,25 @@ const ResourcePackEditor = new class ResourcePackEditor {
      */
     registerGame(game: RPEGame) {
         this.loadedGames[game.id] = game;
+    }
+
+    registerPlatform(platform: RPEPlatform) {
+        if (this.platform) {
+            throw new IllegalStateError("Tried to load a new platform implementation (\"" + platform.getID() + "\"), but there was an existing platform loaded (\"" + this.platform.getID() + "\")!");
+        } else {
+            this.platform = platform;
+            this.platform.onload();
+            this.initialization.complete();
+        }
+    }
+    getPlatform() {
+        return this.platform;
+    }
+    registerInitializationHandler(handler: ()=>void) {
+        this.initialization.thenRun(handler);
+    }
+    isInitialized() {
+        return this.initialization.isDone();
     }
 };
 export default ResourcePackEditor;

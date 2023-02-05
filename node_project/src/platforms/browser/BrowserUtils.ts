@@ -1,14 +1,14 @@
 import FailedRequestError from "../../rpe/error/FailedRequestError";
 import Future from "../../rpe/util/Future";
 import RPEBrowserLocalSavedEntry from "./RPEBrowserLocalSavedEntry";
+import RPEBrowserLocalSavedProject from "./RPEBrowserLocalSavedProject";
 
 export default class BrowserUtils {
     static BINDING_KEY = "browser";
     private static FILE_CACHE_IDB_KEY = "filecache";
     private static FILE_CACHE_IDB_OBJECTSTORE_KEY = "saved_files";
     private static FILE_CACHE_IDB: Future<IDBDatabase> = null;
-    private constructor(){}
-
+    private static SAVED_PROJECT_MAP: Map<string, RPEBrowserLocalSavedProject> = new Map();
     private static initFileCache(): Future<IDBDatabase> {
         if (this.FILE_CACHE_IDB) return this.FILE_CACHE_IDB;
         this.FILE_CACHE_IDB = new Future<IDBDatabase>();
@@ -94,7 +94,10 @@ export default class BrowserUtils {
             handle: handle
         };
     }
-    static createSavedProject(projectID: string) {
-
+    static createSavedProject(projectID: string): RPEBrowserLocalSavedProject {
+        return {
+            projectID: projectID,
+            files: {}
+        };
     }
 }

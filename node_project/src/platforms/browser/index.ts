@@ -1,7 +1,8 @@
-import RPEPlatformLocalFile from "../../rpe/platform/RPEPlatformLocalFile";
 import BrowserUtils from "./BrowserUtils";
-import RPEBrowserLocalFileBinding from "./RPEBrowserLocalFileBinding";
+import ResourcePackEditor from "../../rpe/ResourcePackEditor";
+import RPEBrowserPlatform from "./RPEBrowserPlatform";
 
-RPEPlatformLocalFile.BINDING = new RPEBrowserLocalFileBinding();
+ResourcePackEditor.registerPlatform(new RPEBrowserPlatform());
 
+//TODO temporary
 window["BrowserConstants"] = BrowserUtils;
