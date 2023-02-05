@@ -1,6 +1,8 @@
+import Future from "./Future";
+
 export default class TimeUnit {
     /**
-     * Time unit representing twenty four {@link TimeUnit.HOURS hours}.
+     * Time unit representing twenty-four {@link TimeUnit.HOURS hours}.
      */
     static DAYS = new TimeUnit("DAYS", "day", "days", 24*60*60*1000);
     /**
@@ -82,17 +84,31 @@ export default class TimeUnit {
         return sourceDuration * this._timeInMillis / targetUnit._timeInMillis;
     }
     /**
+     * Returns a Future, which will complete after
+     * the specified amount of time in this TimeUnit
+     * has passed.
+     * @param timeout the duration in this TimeUnit to time out
+     * @returns a new Future
+     */
+    sleep(timeout: number): Future<void> {
+        let f = new Future<void>();
+        setTimeout(()=>{
+            f.complete(null);
+        }, timeout * this._timeInMillis);
+        return f;
+    }
+    /**
      * Performs a timed `setTimeout` using this time unit.
      * Given the variable `result`, the following statements are equivalent:
      * ```
      * result = TimeUnit.SECONDS.timeout(0.5, ()=>{
      *     console.log("done");
      * });
-     * 
+     *
      * result = TimeUnit.MILLISECONDS.timeout(500, ()=>{
      *     console.log("done")
      * }));
-     * 
+     *
      * result = setTimeout(()=>{
      *     console.log("done");
      * }, 500);

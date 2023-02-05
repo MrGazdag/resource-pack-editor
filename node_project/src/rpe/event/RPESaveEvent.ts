@@ -5,4 +5,7 @@ export default class RPESaveEvent extends RPEEvent {
     constructor() {
         super();
     }
+    getSave(): string {
+        return "lofasz";
+    }
 }

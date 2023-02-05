@@ -1,6 +1,7 @@
 import RPEGame from "./game/RPEGame";
 import RPESupportedGameEntry from "./game/RPESupportedGameEntry";
 import Future from "./util/Future";
+import RPEEventNode from "./event/RPEEventNode";
 
 const ResourcePackEditor = new class ResourcePackEditor {
     /*
@@ -51,7 +52,8 @@ const ResourcePackEditor = new class ResourcePackEditor {
         }
     }
     */
-   static EDITOR_VERSION = "0.0.1";
+   readonly EDITOR_VERSION = "0.0.1";
+   eventNode: RPEEventNode = new RPEEventNode();
    /**
     * A map containing the loaded games.
     */
